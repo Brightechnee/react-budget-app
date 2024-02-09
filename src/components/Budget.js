@@ -10,24 +10,19 @@ const Budget = () => {
   }
 
   const updateBudget = () => {
-    // Use getElementById to get the input element and set the new budget
-    const inputElement = document.getElementById('budgetInput');
-    if (inputElement) {
-      const inputValue = inputElement.value;
-      dispatch({ type: 'SET_BUDGET', payload: parseInt(inputValue, 10) });
-    }
+    // Dispatch an action to update the budget in the context
+    dispatch({ type: 'SET_BUDGET', payload: parseInt(newBudget, 10) });
   }
 
   return (
     <div className='alert alert-secondary'>
       <span>Budget: £{budget}</span>
       <input
-        id="budgetInput"
         type="number"
         step="10"
         value={newBudget}
         onChange={handleBudgetChange}
-        onBlur={updateBudget}
+        onBlur={updateBudget} // Update the budget when the input loses focus
       />
     </div>
   );
