@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .increase {
+    background-color: green;
+    color: white;
+  }
+  
+  .decrease {
+    background-color: red;
+    color: white;
+  }
+  
